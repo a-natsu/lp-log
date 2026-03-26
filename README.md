@@ -16,5 +16,3 @@ Next.js / TypeScript / Tailwind CSS
 npm install  
 
 npm run dev  
-
-http://localhost:3000

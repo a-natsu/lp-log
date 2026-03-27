@@ -1,24 +1,29 @@
-- LP改善ログ（ポートフォリオ）
-- 公開URL
+LP Improvement Log (Portfolio)
+
+Japanese README: ./README.ja.md
+
+Live
 
 https://lp-log.vercel.app/
 
-- リポジトリ（ソースコード）
-    
+Repository
+
 https://github.com/a-natsu/lp-log
 
-- 概要
+Overview
 
-LP改善ログを「一覧 → 詳細」で見せるポートフォリオ（Next.jsで制作）
+A small portfolio app that shows landing page improvement experiments in a List → Detail flow, built with Next.js.
 
-- 技術
+Tech Stack
 
 Next.js / TypeScript / Tailwind CSS
 
-- ローカル起動
+What I’d love feedback on
 
-npm install  
+Information hierarchy on the list page: what would you change first to make it more scannable?
 
-npm run dev  
+Run locally
 
-ブラウザで http://localhost:3000 を開く
+npm install
+
+npm run dev

@@ -1,3 +1,5 @@
+Note: This is a portfolio sample. Maintenance is currently paused (Last updated: 2026-03-27).
+
 LP Improvement Log (Portfolio)
 
 Japanese README: ./README.ja.md
@@ -17,10 +19,6 @@ A small portfolio app that shows landing page improvement experiments in a List 
 Tech Stack
 
 Next.js / TypeScript / Tailwind CSS
-
-What I’d love feedback on
-
-Information hierarchy on the list page: what would you change first to make it more scannable?
 
 Run locally
 

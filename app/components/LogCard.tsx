@@ -1,15 +1,7 @@
 "use client";
 import Link from "next/link";
 
-// 型定義（このカードがどんなデータを受け取るかのルール）
-export type Log = {
-  id: string;
-  title: string;
-  lp: string;
-  date: string;
-  kpi: string;
-  status: string;
-};
+import type { Log } from "../types/log";
 
 function statusBadgeClass(status: string) {
   switch (status) {

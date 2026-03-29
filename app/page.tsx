@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LogCard } from "./components/LogCard";
 const logs = [
 
 { id: "1", title: "フォーム項目削減", lp: "無料相談LP", date: "2026-03-10", kpi: "CVR", status: "完了" },
@@ -16,22 +16,10 @@ export default function Home(){
              <ul>
 
 {logs.map((log) => (
-
-<li key={log.id}>
-
-<Link href={`/logs/${log.id}`}>
-
-
-{log.title} / {log.lp} / {log.date} / KPI: {log.kpi} / {log.status}
-
-</Link>
-
-</li>
-
+    <LogCard key={log.id} log={log} />
 ))}
 
 </ul>
              </main>
   );
-                    
-             }
+ }

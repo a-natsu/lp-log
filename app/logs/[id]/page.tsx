@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 
 import { logs } from "../../data/logs";
 
+import { statusBadgeClass } from "../../components/statusBadgeClass";
+
 import { use } from "react";
 
 export default function LogDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -37,9 +39,10 @@ return (
         <p className="mt-1 text-sm text-gray-600">{log.lp}</p>
       </div>
       {/* 「完了」等のステータス。角丸のバッジ（rounded-full）みたいな見た目にしている */}
-      <span className="shrink-0 rounded-full px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-700">
-        {log.status}
-      </span>
+    <span className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${statusBadgeClass(log.status)}`}>
+  {log.status}
+  
+</span>
     </header>
 　　{/* 日付やKPIを並べる「リスト形式」の箱 */}
     <dl className="mt-4 grid grid-cols-1 gap-3 text-sm">

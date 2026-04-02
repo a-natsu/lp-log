@@ -7,4 +7,5 @@ export type Log = {
   date: string;
   kpi: string;
   status: string;
+  body: string;
 };

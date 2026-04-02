@@ -1,24 +1,51 @@
+"use client";
+
+import { useState } from "react";
+
+import { logs } from "./data/logs";
+
 import { LogCard } from "./components/LogCard";
-const logs = [
 
-{ id: "1", title: "フォーム項目削減", lp: "無料相談LP", date: "2026-03-10", kpi: "CVR", status: "完了" },
-
-{ id: "2", title: "FV訴求の具体化", lp: "資料請求LP", date: "2026-03-14", kpi: "スクロール率", status: "検証" },
-
-{ id: "3", title: "FAQ追加", lp: "オンライン相談LP", date: "2026-03-18", kpi: "離脱率", status: "実装" },
-
-];
 export default function Home(){
+
+// 1. 今どのボタン（ステータス）が選ばれているかを覚えるメモ帳
+const [selectedStatus, setSelectedStatus] = useState<string | null>(null);
+
+// 2. そのメモ帳の内容を見て、表示するデータを絞り込む
+const filteredLogs = selectedStatus 
+  ? logs.filter((log) => log.status === selectedStatus) 
+  : logs;
+
   return (
-           <main>
+           <main className="max-w-2xl mx-auto p-6 md:p-12">
              <h1>LP改善ログ</h1>
              <p>フロントエンド（UI）職への転職に向けて、Next.jsでポートフォリオを制作中です。</p>
-             <ul>
 
-{logs.map((log) => (
+<div className="mt-4 flex flex-wrap gap-2">
+  {/* 「全部」ボタン */}
+  <button 
+    onClick={() => setSelectedStatus(null)} 
+    className={`rounded-full border px-3 py-1 text-sm ${selectedStatus === null ? "bg-gray-900 text-white" : "bg-white"}`}
+  >
+    全部
+  </button>
+
+  {/* 「完了・検証・実装」ボタンを自動で作る */}
+  {["完了", "検証", "実装"].map((s) => (
+    <button 
+      key={s} 
+      onClick={() => setSelectedStatus(s)} 
+      className={`rounded-full border px-3 py-1 text-sm ${selectedStatus === s ? "bg-gray-900 text-white" : "bg-white"}`}
+    >
+      {s}
+    </button>
+  ))}
+</div>
+
+<ul className="mt-4 space-y-3">
+  {filteredLogs.map((log) => (
     <LogCard key={log.id} log={log} />
-))}
-
+  ))}
 </ul>
              </main>
   );

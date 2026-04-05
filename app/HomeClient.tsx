@@ -12,10 +12,13 @@ export default function HomeClient() {
   const router = useRouter();
 
   const searchParams = useSearchParams();
+  const allowedStatuses = ["完了", "検証", "実装"] as const;
 
-  const selectedStatus = searchParams.get("status");
+  const statusParam = searchParams.get("status");
+  const selectedStatus = allowedStatuses.includes(statusParam as any)
+    ? statusParam
+    : null;
 
-  // 2. そのメモ帳の内容を見て、表示するデータを絞り込む
   const filteredLogs = selectedStatus
     ? logs.filter((log) => log.status === selectedStatus)
     : logs;

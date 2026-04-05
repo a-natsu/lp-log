@@ -1,4 +1,4 @@
-Note: This is a portfolio sample. Maintenance is currently paused (Last updated: 2026-04-05).
+Note: This is a portfolio sample. Last updated: 2026-04-05
 
 LP Improvement Log (Portfolio)
 

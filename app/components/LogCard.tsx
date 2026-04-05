@@ -22,14 +22,10 @@ export function LogCard({ log }: { log: Log }) {
           </span>
         </div>
 
-        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500">
-          <span>{log.lp}</span>
-          <span>{log.date}</span>
-        </div>
-
-        <div className="mt-3 flex items-baseline gap-2">
-          <span className="text-xs text-gray-500">KPI</span>
-          <span className="text-sm font-medium text-gray-900">{log.kpi}</span>
+        <div className="mt-2 flex flex-wrap gap-2 text-xs text-gray-500">
+          <span className="truncate">
+            {log.lp}・{log.date}・KPI：{log.kpi}
+          </span>
         </div>
       </Link>
     </li>

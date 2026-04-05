@@ -6,6 +6,8 @@ import { logs } from "./data/logs";
 
 import { LogCard } from "./components/LogCard";
 
+import Link from "next/link";
+
 export default function HomeClient() {
   const router = useRouter();
 
@@ -53,12 +55,12 @@ export default function HomeClient() {
           <p className="mt-1 text-sm text-gray-500">
             フィルタ条件を変えてみてください。
           </p>
-          <button
-            onClick={() => router.replace("/")}
-            className="mt-4 rounded-full bg-gray-900 px-4 py-2 text-sm text-white"
+          <Link
+            href="/"
+            className="mt-4 inline-flex items-center rounded-full bg-gray-900 text-white px-4 py-2 text-sm "
           >
             全部に戻す
-          </button>
+          </Link>
         </div>
       ) : (
         /* 2. ログがある時の表示 */

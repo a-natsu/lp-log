@@ -1,27 +1,36 @@
-Note: This is a portfolio sample. Last updated: 2026-04-09
+# LP Improvement Log (Portfolio)
 
-LP Improvement Log (Portfolio)
+A small portfolio app to browse LP optimization logs in a **list → detail** flow.
 
-Japanese README: ./README.ja.md
+## Demo
+- https://lp-log.vercel.app/
 
-Live
+## Features
+- Log list (card UI)
+- Log detail page (`/logs/[id]`)
+- Status filter (persists in URL, e.g. `/?status=完了`)
+- Empty state when no results match the filter
 
-https://lp-log.vercel.app/
+## Tech Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel
 
-Repository
+## Notes (What I focused on)
+- Keeping the code maintainable with TypeScript types (e.g. `Status` as a union type)
+- Running `npm run build` before pushing changes (production-like checks)
 
-https://github.com/a-natsu/lp-log
-
-Overview
-
-A small portfolio app that shows landing page improvement experiments in a List → Detail flow, built with Next.js.
-
-Tech Stack
-
-Next.js / TypeScript / Tailwind CSS
-
-Run locally
+## Getting Started
+cd lp-log
 
 npm install
 
 npm run dev
+
+
+## Build
+npm run build
+
+## Japanese README
+- See `README_ja.md`

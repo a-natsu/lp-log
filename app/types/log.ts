@@ -1,4 +1,4 @@
-// app/types/log.ts
+export type Status = "完了" | "検証" | "実装";
 
 export type Log = {
   id: string;
@@ -6,6 +6,6 @@ export type Log = {
   lp: string;
   date: string;
   kpi: string;
-  status: string;
+  status: Status;
   body: string;
 };

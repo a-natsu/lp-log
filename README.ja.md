@@ -1,21 +1,33 @@
-※ポートフォリオ用サンプルです。最終更新：2026/04/09
+# LP改善ログ（Portfolio）
 
-LP改善ログ（ポートフォリオ）
-公開URL
-https://lp-log.vercel.app/
+LP改善のログを「一覧 → 詳細」で見られるポートフォリオです。
 
-リポジトリ（ソースコード）
-https://github.com/a-natsu/lp-log
+## Demo
+- https://lp-log.vercel.app/
 
-概要
-LP改善ログを「一覧 → 詳細」で見せるポートフォリオ（Next.jsで制作）
+## Features
+- ログ一覧（カード表示）
+- ログ詳細（/logs/[id]）
+- ステータスフィルタ（URLに状態を保持：`/?status=完了`）
+- フィルタ結果が0件のときの表示（空状態）
 
-技術
-Next.js / TypeScript / Tailwind CSS
+## Tech Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Vercel
 
-ローカル起動
+## Notes（意識したこと）
+- TypeScriptで型を揃えて保守しやすく（例：`Status` を union 型で定義）
+- `npm run build` を通してから push（本番相当のチェックをしてから反映）
+
+## Getting Started
+cd lp-log
+
 npm install
 
 npm run dev
 
-ブラウザで http://localhost:3000 を開く
+
+## Build
+npm run build

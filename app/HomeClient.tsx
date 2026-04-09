@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 import { logs } from "./data/logs";
 
@@ -12,12 +13,18 @@ export default function HomeClient() {
   const router = useRouter();
 
   const searchParams = useSearchParams();
-  const allowedStatuses = ["完了", "検証", "実装"] as const;
-
   const statusParam = searchParams.get("status");
-  const selectedStatus = allowedStatuses.includes(statusParam as any)
+
+  const allowed = ["完了", "検証", "実装"] as const;
+  const selectedStatus = allowed.includes(statusParam as any)
     ? statusParam
     : null;
+
+  useEffect(() => {
+    if (statusParam !== null && selectedStatus === null) {
+      router.replace("/");
+    }
+  }, [statusParam, selectedStatus, router]);
 
   const filteredLogs = selectedStatus
     ? logs.filter((log) => log.status === selectedStatus)

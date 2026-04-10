@@ -1,15 +1,17 @@
 # LP Improvement Log (Portfolio)
 
 A small portfolio app to browse LP optimization logs in a **list → detail** flow.
+After deciding to transition into frontend/full-stack development, I dedicated about 2–4 hours per day for ~2 weeks to build and ship an MVP (a minimal, end-to-end working version). Since then, I’ve been continuously improving it.
 
 ## Demo
 - https://lp-log.vercel.app/
 
 ## Features
-- Log list (card UI)
-- Log detail page (`/logs/[id]`)
-- Status filter (persists in URL, e.g. `/?status=完了`)
-- Empty state when no results match the filter
+- The list page renders log entries
+- Each entry has a detail page (`/logs/[id]`)
+- Status filtering with URL query state (so it can be shared/restored)
+- Empty-state UI when no items match
+- Deployed on Vercel and accessible via a public URL
 
 ## Tech Stack
 - Next.js (App Router)

@@ -33,8 +33,10 @@ export default function HomeClient() {
   return (
     <main className="max-w-2xl mx-auto p-6 md:p-12 text-center">
       <h1 className="text-xl font-bold">LP改善ログ</h1>
-      <p className="mt-2 text-sm text-gray-600 max-w-xl mx-auto">
-        フロントエンド（UI）職への転職に向けて、Next.jsでポートフォリオを制作中です。
+      <p className="mt-2 text-sm text-gray-600 max-w-xl mx-auto whitespace-pre-line">
+        {
+          "Next.jsでLP改善ログを「一覧→詳細」で見せるポートフォリオを作成しました。\n現在も継続的に改善しています。"
+        }
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">

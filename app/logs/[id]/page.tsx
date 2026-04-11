@@ -46,7 +46,9 @@ export default function LogDetailPage({
             {/* どのLPの話かを表示。タイトルの下に少し隙間（mt-1）を作っている */}
             <p className="mt-1 text-sm text-gray-600">{log.lp}</p>
             {/* 詳細ページに本文（やったこと/学び）を表示。読みやすい行間（leading-6） */}
-            <p className="mt-4 text-base leading-6 text-gray-700">{log.body}</p>
+            <p className="mt-4 text-base leading-6 text-gray-700  whitespace-pre-line">
+              {log.body}
+            </p>
           </div>
           {/* 「完了」等のステータス。角丸のバッジ（rounded-full）みたいな見た目にしている */}
           <span

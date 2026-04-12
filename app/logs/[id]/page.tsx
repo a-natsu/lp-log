@@ -23,7 +23,7 @@ export default function LogDetailPage({
 
   return (
     //画面全体の土台。横幅をほどよく制限して（max-w-2xl）、真ん中に寄せて（mx-auto）、周りに余白（p-6）を作っている
-    <main className="max-w-2xl mx-auto p-6">
+    <main className="max-w-2xl mx-auto w-full px-4 py-6 sm:px-6">
       <div className="mb-4">
         {" "}
         {/* 下に少し隙間（mb-4）を作るための箱 */}
@@ -37,7 +37,7 @@ export default function LogDetailPage({
       </div>
 
       {/* 詳細情報のメインカード。角を丸くして（rounded-xl）、薄いグレーの線で囲んで、中身を白くしている */}
-      <article className="rounded-xl border border-gray-200 bg-white p-5">
+      <article className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6">
         {/* タイトルとステータスを「横並び（flex）」にして、両端に寄せる（justify-between）ための見出し部分 */}
         <header className="flex items-start justify-between gap-3">
           <div>
@@ -46,7 +46,7 @@ export default function LogDetailPage({
             {/* どのLPの話かを表示。タイトルの下に少し隙間（mt-1）を作っている */}
             <p className="mt-1 text-sm text-gray-600">{log.lp}</p>
             {/* 詳細ページに本文（やったこと/学び）を表示。読みやすい行間（leading-6） */}
-            <p className="mt-4 text-base leading-6 text-gray-700  whitespace-pre-line">
+            <p className="mt-4 text-sm leading-7 text-gray-700 whitespace-pre-line">
               {log.body}
             </p>
           </div>

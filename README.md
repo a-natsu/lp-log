@@ -1,7 +1,7 @@
 # LP Improvement Log (Portfolio)
 
 A small portfolio app to browse LP optimization logs in a **list → detail** flow.
-After deciding to transition into frontend/full-stack development, I dedicated about 2–4 hours per day for ~2 weeks to build and ship an MVP (a minimal, end-to-end working version). Since then, I’ve been continuously improving it.
+I dedicated about 2–4 hours per day for ~2 weeks to build and ship an MVP (a minimal, end-to-end working version). Since then, I’ve been continuously improving it.
 
 ## Demo
 - https://lp-log.vercel.app/
